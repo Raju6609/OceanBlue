@@ -39,10 +39,10 @@ export class OrderBookDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private service: OrderService) { }
 
-  ngOnInit() {
-    let resp = this.http.get("http://127.0.0.1:5000/orderbook");
-    resp.subscribe((data)=>this.orderbook=data);
-  }
+  // ngOnInit() {
+  //   let resp = this.http.get("http://127.0.0.1:5000/orderbook");
+  //   resp.subscribe((data)=>this.orderbook=data);
+  // }
 
   ngOnInit() {
     this.service.getOrders().pipe(takeUntil(this.destroy$)).subscribe((data: Order[]) => this.orders = data);
