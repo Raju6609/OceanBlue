@@ -1,0 +1,7 @@
+[
+  {"askQty": 400, "askPrice": 20.00, "bidQty": 23.90, "bidPrice": 50},
+  {"askQty": 850, "askPrice": 12.00, "bidQty": 24, "bidPrice": 1000},
+  {"askQty": 25, "askPrice": 10.00, "bidQty": 24.45, "bidPrice": 1000},
+  {"askQty": 750, "askPrice": 6.00, "bidQty": 24.90, "bidPrice": 925},
+  {"askQty": 500, "askPrice": 5.10, "bidQty": 25.90, "bidPrice": 3950}
+]

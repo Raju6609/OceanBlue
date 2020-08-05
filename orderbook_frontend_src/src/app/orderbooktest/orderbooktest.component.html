@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="text-align:centre" >
+  <h2  style="text-align:center" >Order Book - List of Orders</h2> <br> 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>OrderId</th>
+        <th>Ticker</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Side</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderbook">
+        <td>{{order.order_id}}</td>
+        <td>{{order.ticker}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.quantity}}</td>
+        <td>{{order.side}}</td>
+        <td>{{order.timestamp}}</td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
