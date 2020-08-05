@@ -132,25 +132,25 @@ class OrderBook:
         return {"best_bid": _best_bid, "best_ask": _best_ask}
 
 
-# if __name__== "__main__":
-#
-#     if os.path.exists(ORDER_BOOK_DB):
-#         os.remove(ORDER_BOOK_DB)  # Clean up for testing
-#
-#     order_book   = OrderBook(message_format="delimited")
-#     instructions = ['1568390201|abbb11|a|AAPL|B|209.00000|100',
-#                     '1568390202|abbb12|a|AAPL|S|210.00000|10',
-#                     '1568390204|abbb11|u|10',
-#                     '1568390203|abbb12|u|101',
-#                     '1568390243|abbb12|c',
-#                     '1568390243|abbb13|a|AAPL|B|209.00000|100',
-#                     '1568390244|abbb13|u|101',
-#                     '1568390245|abbb13|c',
-#                     '1568390243|abbb14|a|AAPL|B|300.00000|150',
-#                     '1568390243|abbb15|a|AAPL|S|299.00000|120']
-#     for instruction in instructions:
-#         try:
-#             response = order_book.process_order(instruction)
-#         except Exception as ex:
-#             print(str(ex))
-#         print(order_book.response)
+if __name__== "__main__":
+
+    if os.path.exists(ORDER_BOOK_DB):
+        os.remove(ORDER_BOOK_DB)  # Clean up for testing
+
+    order_book   = OrderBook(message_format="delimited")
+    instructions = ['1568390201|abbb11|a|AAPL|B|209.00000|100',
+                    '1568390202|abbb12|a|AAPL|S|210.00000|10',
+                    '1568390204|abbb11|u|10',
+                    '1568390203|abbb12|u|101',
+                    '1568390243|abbb12|c',
+                    '1568390243|abbb13|a|AAPL|B|209.00000|100',
+                    '1568390244|abbb13|u|101',
+                    '1568390245|abbb13|c',
+                    '1568390243|abbb14|a|AAPL|B|300.00000|150',
+                    '1568390243|abbb15|a|AAPL|S|299.00000|120']
+    for instruction in instructions:
+        try:
+            response = order_book.process_order(instruction)
+        except Exception as ex:
+            print(str(ex))
+        print(order_book.response)
